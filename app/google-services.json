@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739399867502",
+    "firebase_url": "https://birralandia.firebaseio.com",
+    "project_id": "birralandia",
+    "storage_bucket": "birralandia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739399867502:android:e6d1c3537dd521d7",
+        "android_client_info": {
+          "package_name": "com.example.birralandia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739399867502-53ig5k2hf5a4791rr0p5kem2p7ga2kio.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.birralandia",
+            "certificate_hash": "07863273db2042619cb90b475779e26a0caed1f7"
+          }
+        },
+        {
+          "client_id": "739399867502-5p8m7nfkgutpkmef97b2d6hvmobbk3f3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASp5Epx63GyeRezLfJ8pM48AUTG5BVBxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739399867502-5p8m7nfkgutpkmef97b2d6hvmobbk3f3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
