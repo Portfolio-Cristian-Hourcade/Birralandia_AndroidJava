@@ -1,5 +1,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -15,20 +16,20 @@
 
     <View
         android:id="@+id/view9"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_width="451dp"
+        android:layout_height="57dp"
         android:background="#B0000000"
         app:layout_constraintBottom_toBottomOf="@+id/background_bb"
         app:layout_constraintEnd_toEndOf="@+id/background_bb"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/background_bb"
         app:layout_constraintTop_toTopOf="@+id/background_bb"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.794" />
 
     <ImageView
         android:id="@+id/Logo_bb"
-        android:layout_width="99dp"
-        android:layout_height="103dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
@@ -37,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/background_bb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintVertical_bias="0.732" />
 
     <TextView
         android:id="@+id/TitleCerveceria"
@@ -45,14 +46,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:text="CERVECERIA 1"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/background_bb"
-        app:layout_constraintHorizontal_bias="0.266"
-        app:layout_constraintStart_toEndOf="@+id/Logo_bb"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
         app:layout_constraintTop_toTopOf="@+id/view9" />
 
     <TextView
@@ -61,7 +62,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:text="Av. libertador 3302, Parlermo, CABA."
         app:layout_constraintEnd_toEndOf="@+id/view9"
         app:layout_constraintHorizontal_bias="0.0"
@@ -70,14 +70,14 @@
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="17dp"
-        android:layout_height="21dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/ubicacion"
         app:layout_constraintBottom_toBottomOf="@+id/view9"
         app:layout_constraintEnd_toEndOf="@+id/view9"
-        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="@+id/view9" />
 </androidx.constraintlayout.widget.ConstraintLayout>

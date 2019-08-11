@@ -35,9 +35,7 @@ public class ListCervecerias extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_cervecerias);
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.Yellow));
-        }
+
         mInicio = findViewById(R.id.Home);
         mMiCuenta = findViewById(R.id.Profile);
         mBusqueda = findViewById(R.id.Busqueda);

@@ -22,7 +22,6 @@
                 android:id="@+id/view2"
                 android:layout_width="0dp"
                 android:layout_height="205dp"
-                android:layout_marginBottom="7dp"
                 android:background="@drawable/corner_bottom"
                 android:elevation="3dp"
                 app:layout_constraintBottom_toTopOf="@+id/scrollView2"
@@ -100,7 +99,7 @@
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/cervezas_list"
                         android:layout_width="match_parent"
-                        android:layout_height="516dp" />
+                        android:layout_height="match_parent" />
 
 
                 </LinearLayout>
