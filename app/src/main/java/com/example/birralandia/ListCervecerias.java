@@ -1,6 +1,7 @@
 package com.example.birralandia;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,6 +43,7 @@ public class ListCervecerias extends FragmentActivity {
 
 
         RecibirCambiosNavigation();
+
     }
 
     public void RecibirCambiosNavigation(){
@@ -73,7 +75,7 @@ public class ListCervecerias extends FragmentActivity {
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        finish();
+                                        startActivity(new Intent(ListCervecerias.this, MainActivity.class));
                                     }
                                 });
                         break;

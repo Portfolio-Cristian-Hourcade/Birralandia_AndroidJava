@@ -12,11 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ReferidosCompartirActivity"></activity>
         <activity
             android:name=".LaBirraBar.LaBirraBarListadoActivity"
             android:label="@string/title_activity_la_birra_bar_listado"
-            android:theme="@style/NoActionBar"></activity>
-        <activity android:name=".AntaresActivity" />
+            android:theme="@style/NoActionBar" />
         <activity android:name=".LaBirraBar.LaBirraBarActivity" />
         <activity
             android:name=".ListCervecerias"

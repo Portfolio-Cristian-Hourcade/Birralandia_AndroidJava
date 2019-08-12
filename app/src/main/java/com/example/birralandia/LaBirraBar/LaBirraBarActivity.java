@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 
 import com.example.birralandia.ListCervecerias;
 import com.example.birralandia.R;
+import com.example.birralandia.ReferidosCompartirActivity;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -65,6 +66,12 @@ public class LaBirraBarActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.entrada, R.anim.salida);
     }
 
+    public void MostrarReferidos(View v){
+
+        startActivity(new Intent(this, ReferidosCompartirActivity.class));
+        overridePendingTransition(R.anim.go_entrada,R.anim.go_salida);
+
+    }
 
 
 

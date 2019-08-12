@@ -47,6 +47,8 @@ public class ListCervezasFragment extends Fragment {
                         switch (aux.getText()+""){
                             case "La Birra Bar":
                                 startActivity(new Intent(getContext(), LaBirraBarActivity.class));
+                                getActivity().overridePendingTransition(R.anim.go_entrada,R.anim.go_salida);
+
                                 break;
                             case "Antares ":
                                 break;

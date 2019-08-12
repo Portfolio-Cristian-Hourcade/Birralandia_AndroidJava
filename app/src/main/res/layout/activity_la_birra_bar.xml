@@ -239,6 +239,7 @@
                                 android:layout_marginStart="8dp"
                                 android:layout_marginLeft="8dp"
                                 android:layout_marginEnd="8dp"
+                                android:onClick="MostrarReferidos"
                                 android:layout_marginRight="8dp"
                                 android:layout_marginBottom="16dp"
                                 android:background="@drawable/btn_infotop"
@@ -683,8 +684,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/item_menu_float"
-                        android:text="ver productos"
                         android:onClick="ListadoProductos"
+                        android:text="ver productos"
                         android:textColor="#020202" />
 
                     <Button
@@ -715,9 +716,9 @@
                         android:id="@+id/button13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
                         android:background="@drawable/btn_infotop"
-                        android:text="pagar"
-                        android:layout_marginTop="15dp"/>
+                        android:text="pagar" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
