@@ -1,13 +1,13 @@
-package com.example.birralandia.LaBirraBar;
+package com.example.lavaderocolores.LaBirraBar;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.birralandia.Adapter.CerveceriasAdapter;
-import com.example.birralandia.Adapter.ProductosAdapter;
-import com.example.birralandia.Model.Cervecerias;
-import com.example.birralandia.Model.ProductosList;
-import com.example.birralandia.Model.RecyclerItemClickListener;
+import com.example.lavaderocolores.Adapter.CerveceriasAdapter;
+import com.example.lavaderocolores.Adapter.ProductosAdapter;
+import com.example.lavaderocolores.Model.Cervecerias;
+import com.example.lavaderocolores.Model.ProductosList;
+import com.example.lavaderocolores.Model.RecyclerItemClickListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.birralandia.R;
+import com.example.lavaderocolores.R;
 
 import java.util.ArrayList;
 

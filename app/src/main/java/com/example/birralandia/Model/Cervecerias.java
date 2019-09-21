@@ -1,4 +1,4 @@
-package com.example.birralandia.Model;
+package com.example.lavaderocolores.Model;
 
 import android.graphics.Bitmap;
 
@@ -7,28 +7,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cervecerias {
+
     private String mTitulo;
-    private String mUbicacion;
-    private int mBackground;
+
+    private String mRanking;
+    private String mUbication;
+    private String mTipo;
+
     private int mLogo;
 
-    public Cervecerias(String Titulo, String Ubicacion, int Background, int Logo){
+    public Cervecerias(String Titulo, String ubicacion, int Logo, String Ranking, String Tipo){
         mTitulo = Titulo;
-        mUbicacion = Ubicacion;
-        mBackground = Background;
         mLogo = Logo;
+        mRanking = Ranking;
+        mTipo = Tipo;
+        mUbication = ubicacion;
     }
+
+
+    public String getRanking(){ return mRanking; }
+
+    public String getTipo(){ return mTipo; }
 
     public String getTitulo(){
         return mTitulo;
     }
 
     public String getUbicacion(){
-        return mUbicacion;
-    }
-
-    public int getmBackground(){
-        return mBackground;
+        return mUbication;
     }
 
     public int getmLogo(){

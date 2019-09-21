@@ -1,4 +1,4 @@
-package com.example.birralandia.Fragment;
+package com.example.lavaderocolores.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-import com.example.birralandia.Adapter.CerveceriasAdapter;
-import com.example.birralandia.LaBirraBar.LaBirraBarActivity;
-import com.example.birralandia.Model.Cervecerias;
-import com.example.birralandia.Model.RecyclerItemClickListener;
-import com.example.birralandia.R;
+import com.example.lavaderocolores.Adapter.CerveceriasAdapter;
+import com.example.lavaderocolores.LaBirraBar.LaBirraBarActivity;
+import com.example.lavaderocolores.Model.Cervecerias;
+import com.example.lavaderocolores.Model.RecyclerItemClickListener;
+import com.example.lavaderocolores.R;
 
 import java.util.ArrayList;
 
@@ -39,15 +41,16 @@ public class ListCervezasFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.cervezas_list);
 
         recyclerView.addOnItemTouchListener(
-                new RecyclerItemClickListener(getContext(), recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override public void onItemClick(View view, int position) {
-                        TextView aux = view.findViewById(R.id.TitleCerveceria);
+                new RecyclerItemClickListener(getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        TextView aux = view.findViewById(R.id.title_birra);
 
                         /** Cargar la nueva activity de la cerveceria **/
-                        switch (aux.getText()+""){
+                        switch (aux.getText() + "") {
                             case "La Birra Bar":
                                 startActivity(new Intent(getContext(), LaBirraBarActivity.class));
-                                getActivity().overridePendingTransition(R.anim.go_entrada,R.anim.go_salida);
+                                getActivity().overridePendingTransition(R.anim.go_entrada, R.anim.go_salida);
 
                                 break;
                             case "Antares ":
@@ -56,22 +59,25 @@ public class ListCervezasFragment extends Fragment {
 
                     }
 
-                    @Override public void onLongItemClick(View view, int position) {
+                    @Override
+                    public void onLongItemClick(View view, int position) {
                         // do whatever
                     }
                 })
         );
 
-        list.add(new Cervecerias("La Birra Bar","Av. Carlos Calvo 4266, Caba.",R.drawable.tarjeta2,R.drawable.birra_landia_logo));
-        list.add(new Cervecerias("Antares","Av. Carlos Calvo 4266, Caba.",R.drawable.tarjeta3,R.drawable.birra_landia_logo));
-        list.add(new Cervecerias("Cervelar","Av. Carlos Calvo 4266, Caba.",R.drawable.tarjeta2,R.drawable.birra_landia_logo));
-        list.add(new Cervecerias("Cafe San Bernardo","Av. Carlos Calvo 4266, Caba.",R.drawable.tarjeta3,R.drawable.birra_landia_logo));
-        list.add(new Cervecerias("BurgerPlus","Av. Carlos Calvo 4266, Caba.",R.drawable.tarjeta2,R.drawable.birra_landia_logo));
+        list.add(new Cervecerias("La Birra Bar", "Av. Carlos Calvo 4266, Caba.", R.drawable.birra_landia_logo, "90%", "Local BIRPREMIUM"));
+
+
+        list.add(new Cervecerias("Antares", "Av. Carlos Calvo 4266, Caba.", R.drawable.oferta_2, "54%", "Local BIRPREMIUM"));
+        list.add(new Cervecerias("Cervelar", "Av. Carlos Calvo 4266, Caba.", R.drawable.oferta_1, "78%", "Local BIRPLAT"));
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new CerveceriasAdapter(list));
 
+        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.salida_750ms);
+        recyclerView.startAnimation(animation);
     }
 }

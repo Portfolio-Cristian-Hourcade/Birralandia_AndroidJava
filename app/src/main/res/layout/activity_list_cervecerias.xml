@@ -9,17 +9,7 @@
     tools:context=".ListCervecerias">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/Busqueda"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <fragment
-            android:id="@+id/fragment"
-            android:name="com.example.birralandia.Fragment.BuscarFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/Profile"
@@ -28,11 +18,11 @@
 
         <fragment
             android:id="@+id/CardList"
-            android:name="com.example.birralandia.Fragment.MiPerfilFragment"
-            class="com.example.birralandia.Fragment.MiPerfilFragment"
+            android:name="com.example.lavaderocolores.Fragment.MiPerfilFragment"
+            class="com.example.lavaderocolores.Fragment.MiPerfilFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragment_list_cervezas"
+            tools:layout="@layout/fragment_mi_perfil"
             tools:visibility="invisible" />
     </androidx.cardview.widget.CardView>
 
@@ -43,11 +33,12 @@
 
         <fragment
             android:id="@+id/HomeFragment"
-            android:name="com.example.birralandia.Fragment.ListCervezasFragment"
-            class="com.example.birralandia.Fragment.ListCervezasFragment"
+            android:name="com.example.lavaderocolores.Fragment.ListCervezasFragment"
+            class="com.example.lavaderocolores.Fragment.ListCervezasFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_list_cervezas" />
+
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

@@ -1,4 +1,4 @@
-package com.example.birralandia;
+package com.example.lavaderocolores;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -19,8 +19,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
-import com.example.birralandia.Service.ServiceFCM;
+import com.example.lavaderocolores.Service.ServiceFCM;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,26 +35,27 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 123;
+    private ProgressBar spinner;
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
-
         setContentView(R.layout.activity_main);
+        spinner = (ProgressBar)findViewById(R.id.progressBar1);
+        spinner.setVisibility(View.GONE);
+
         ServiceFCM.getToken();
-        RedondearLogoSplash();
-
-    }
-
-    public void IniciarSesion(View v){
         VerificarUsuarioOnline();
+
     }
 
+    @Override
+    public void onBackPressed() {
+        /**Tuvi**/
+        Log.e("sd","HOLA");
+    }
     /** Transformamos el logo con bordes **/
 
     private void RedondearLogoSplash(){

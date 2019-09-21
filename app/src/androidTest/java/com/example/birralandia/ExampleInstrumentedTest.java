@@ -1,4 +1,4 @@
-package com.example.birralandia;
+package com.example.lavaderocolores;
 
 import android.content.Context;
 

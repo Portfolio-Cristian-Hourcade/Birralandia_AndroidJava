@@ -1,4 +1,4 @@
-package com.example.birralandia;
+package com.example.lavaderocolores;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -39,7 +39,6 @@ public class ListCervecerias extends FragmentActivity {
 
         mInicio = findViewById(R.id.Home);
         mMiCuenta = findViewById(R.id.Profile);
-        mBusqueda = findViewById(R.id.Busqueda);
 
 
         RecibirCambiosNavigation();
@@ -56,18 +55,11 @@ public class ListCervecerias extends FragmentActivity {
                     case R.id.action_home:
                         mMiCuenta.setVisibility(View.INVISIBLE);
                         mInicio.setVisibility(View.VISIBLE);
-                        mBusqueda.setVisibility(View.INVISIBLE);
                         break;
                     case R.id.action_account:
                         mInicio.setVisibility(View.INVISIBLE);
                         mMiCuenta.setVisibility(View.VISIBLE);
-                        mBusqueda.setVisibility(View.INVISIBLE);
 
-                        break;
-                    case R.id.action_search:
-                        mInicio.setVisibility(View.INVISIBLE);
-                        mMiCuenta.setVisibility(View.INVISIBLE);
-                        mBusqueda.setVisibility(View.VISIBLE);
                         break;
                     case R.id.action_logout:
                         AuthUI.getInstance()
@@ -75,7 +67,7 @@ public class ListCervecerias extends FragmentActivity {
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        startActivity(new Intent(ListCervecerias.this, MainActivity.class));
+                                        startActivity(new Intent(ListCervecerias.this, OnboardingActivity.class));
                                     }
                                 });
                         break;

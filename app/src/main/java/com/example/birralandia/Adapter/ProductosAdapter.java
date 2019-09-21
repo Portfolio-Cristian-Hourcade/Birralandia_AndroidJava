@@ -1,4 +1,4 @@
-package com.example.birralandia.Adapter;
+package com.example.lavaderocolores.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.birralandia.Model.Cervecerias;
-import com.example.birralandia.Model.ProductosList;
-import com.example.birralandia.R;
+import com.example.lavaderocolores.Model.Cervecerias;
+import com.example.lavaderocolores.Model.ProductosList;
+import com.example.lavaderocolores.R;
 
 import org.w3c.dom.Text;
 

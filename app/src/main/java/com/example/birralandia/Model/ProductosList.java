@@ -1,4 +1,4 @@
-package com.example.birralandia.Model;
+package com.example.lavaderocolores.Model;
 
 
 

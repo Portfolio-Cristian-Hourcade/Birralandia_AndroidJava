@@ -1,4 +1,4 @@
-package com.example.birralandia.Adapter;
+package com.example.lavaderocolores.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.birralandia.Model.Cervecerias;
-import com.example.birralandia.R;
+import com.example.lavaderocolores.Model.Cervecerias;
+import com.example.lavaderocolores.R;
 
 import org.w3c.dom.Text;
 
@@ -28,7 +28,7 @@ public class CerveceriasAdapter extends
         LayoutInflater inflater = LayoutInflater.from(context);
 
         // Inflate the custom layout
-        View contactView = inflater.inflate(R.layout.card_item, parent, false);
+        View contactView = inflater.inflate(R.layout.card_item2, parent, false);
 
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder(contactView);
@@ -45,14 +45,21 @@ public class CerveceriasAdapter extends
         TextView textView = viewHolder.Title;
         textView.setText(_Cervecerias.getTitulo());
 
-        TextView _Ubicacion = viewHolder.Ubication;
-        _Ubicacion.setText(_Cervecerias.getUbicacion());
+        TextView ubicacion = viewHolder.Ubication;
+        ubicacion.setText(_Cervecerias.getUbicacion());
 
-        ImageView _Background = viewHolder.Background;
-        _Background.setImageResource(_Cervecerias.getmBackground());
 
         ImageView _Logo = viewHolder.Logo;
         _Logo.setImageResource(_Cervecerias.getmLogo());
+
+        TextView _RankingPorcentaje = viewHolder.RankingPorcentaje;
+        _RankingPorcentaje.setText(_Cervecerias.getRanking());
+
+        TextView Tipo = viewHolder.Tipo;
+        Tipo.setText(_Cervecerias.getTipo());
+
+        ImageView feliz = viewHolder.staticFelicidad;
+        feliz.setImageResource(R.drawable.laugh);
     }
 
     // Returns the total count of items in the list
@@ -66,9 +73,10 @@ public class CerveceriasAdapter extends
         // for any view that will be set as you render a row
         public TextView Title;
         public TextView Ubication;
-        public ImageView Background;
         public ImageView Logo;
-
+        public TextView Tipo;
+        public TextView RankingPorcentaje;
+        public ImageView staticFelicidad;
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
         public ViewHolder(View itemView) {
@@ -76,18 +84,19 @@ public class CerveceriasAdapter extends
             // to access the context from any ViewHolder instance.
             super(itemView);
 
-            Title = (TextView) itemView.findViewById(R.id.TitleCerveceria);
-            Ubication = (TextView) itemView.findViewById(R.id.Ubicacion);
-            Background = (ImageView) itemView.findViewById(R.id.background_bb);
-            Logo = (ImageView) itemView.findViewById(R.id.Logo_bb);
-
+            Title = (TextView) itemView.findViewById(R.id.title_birra);
+            Ubication = (TextView) itemView.findViewById(R.id.ubicacion_birra);
+            Logo = (ImageView) itemView.findViewById(R.id.logo_birra);
+            Tipo = itemView.findViewById(R.id.tipo_birra);
+            RankingPorcentaje = itemView.findViewById(R.id.porcentaje_birra);
+            staticFelicidad = itemView.findViewById(R.id.felicidad);
         }
     }
 
     private List<Cervecerias> mCervecerias;
 
 
-    public CerveceriasAdapter(List<Cervecerias> contacts) {
-        mCervecerias = contacts;
+    public CerveceriasAdapter(List<Cervecerias> cervecerias) {
+        mCervecerias = cervecerias;
     }
 }
